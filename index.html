@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="box-border" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>using tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#A4BC46",
+              secondary: "#FABE4C",
+              herobg: "#FFFBF0",
+            },
+            fontFamily: {
+              bebas: ["Bebas Neue", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      src="https://kit.fontawesome.com/9e05aa31c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+    </style>
+  </head>
+  <body>
+    <header
+      class="w-full flex justify-between items-center h-20 bg-white shadow-lg px-20"
+    >
+      <div>
+        <span class="font-medium">
+          <i class="fa-solid fa-igloo"></i>
+          <span class="text-primary">Penguin</span> Fashion
+        </span>
+      </div>
+      <!-- MOBILE NAV  -->
+      <div class="block lg:hidden">
+        <button>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- DESKTOP NAV  -->
+      <nav class="hidden lg:block md:w-7/12">
+        <ul class="flex gap-20">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#contactus">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section
+      id="hero"
+      class="flex flex-col lg:flex-row justify-between items-center px-20 bg-herobg"
+    >
+      <div class="pt-10 sm:text-center md:text-left lg:pt-0">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold font-bebas">
+          <span class="text-secondary">Be the Penguins</span>
+          of Winter
+        </h1>
+        <p class="mb-5">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+        <div class="flex lg:block justify-start sm:justify-center items-center">
+          <button
+            class="buyNowButton bg-primary px-3 font-medium py-2 rounded-lg gap-2 flex items-center text-white"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>BUY NOW
+          </button>
+        </div>
+      </div>
+      <div class="w-full md:w-9/12 mt-10 md:mt-0">
+        <img
+          class=""
+          src="./asset/image/heroimage.webp"
+          alt="penguin fashion"
+        />
+      </div>
+    </section>
+
+    <section id="products" class="px-20 py-10">
+      <h2 class="font-bebas text-4xl">WOMEN JACKET</h2>
+
+      <div
+        class="cardContainer grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
+      >
+        <div class="card shadow-lg rounded-xl p-5">
+          <div
+            class="cardImage bg-slate-200 rounded-xl flex h-96 w-full justify-center items-center"
+          >
+            <img
+              class="h-full w-auto"
+              src="./asset/image/product1.png"
+              alt="jacket"
+            />
+          </div>
+          <div class="cardContent mt-4">
+            <h4 class="text-3xl font-medium font-bebas">Yellow Coat Jacket</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="flex justify-between items-center mt-5">
+              <p class="price text-3xl text-secondary font-semibold">$234</p>
+              <button
+                class="buyNowButton bg-primary px-3 font-medium py-2 rounded-lg gap-2 flex items-center text-white"
+              >
+                <i class="fa-solid fa-cart-shopping"></i>BUY NOW
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow-lg rounded-xl p-5">
+          <div
+            class="cardImage bg-slate-200 rounded-xl flex h-96 w-full justify-center items-center"
+          >
+            <img
+              class="h-full w-auto"
+              src="./asset/image/product2.png"
+              alt="jacket"
+            />
+          </div>
+          <div class="cardContent mt-4">
+            <h4 class="text-3xl font-medium font-bebas">Yellow Coat Jacket</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="flex justify-between items-center mt-5">
+              <p class="price text-3xl text-secondary font-semibold">$234</p>
+              <button
+                class="buyNowButton bg-primary px-3 font-medium py-2 rounded-lg gap-2 flex items-center text-white"
+              >
+                <i class="fa-solid fa-cart-shopping"></i>BUY NOW
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow-lg rounded-xl p-5">
+          <div
+            class="cardImage bg-slate-200 rounded-xl flex h-96 w-full justify-center items-center"
+          >
+            <img
+              class="h-full w-auto"
+              src="./asset/image/product3.png"
+              alt="jacket"
+            />
+          </div>
+          <div class="cardContent mt-4">
+            <h4 class="text-3xl font-medium font-bebas">Yellow Coat Jacket</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="flex justify-between items-center mt-5">
+              <p class="price text-3xl text-secondary font-semibold">$234</p>
+              <button
+                class="buyNowButton bg-primary px-3 font-medium py-2 rounded-lg gap-2 flex items-center text-white"
+              >
+                <i class="fa-solid fa-cart-shopping"></i>BUY NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
